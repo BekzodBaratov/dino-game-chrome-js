@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.card {
+  width: 70%;
+  height: 200px;
+  border: 5px solid red;
+  border-radius: 0.5em;
+  position: relative;
+  overflow: hidden;
+}
+.dino {
+  width: 30px;
+  height: 70px;
+  background-color: red;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+}
+.anima1 {
+  animation: dino 0.5s linear;
+}
+@keyframes dino {
+  0% {
+    bottom: 0;
+  }
+  40% {
+    bottom: 90px;
+  }
+  50% {
+    bottom: 100px;
+  }
+  60% {
+    bottom: 90px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+.wall {
+  width: 25px;
+  height: 30px;
+  background-color: blue;
+  position: absolute;
+  z-index: -1;
+  left: 1000px;
+  bottom: 0;
+  animation: wall 2s linear infinite;
+}
+@keyframes wall {
+  100% {
+    left: 0px;
+  }
+}
